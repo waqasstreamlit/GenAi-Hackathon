@@ -11,7 +11,7 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 GEMINI_API_KEY = 'AIzaSyAE__BHdLtFBn3HEi0EcJ7ySNkZvqRU5YA'
 
 def generate_detailed_description(image):
-    inputs = processor(image, return_tensors="pt").to("cuda")
+    inputs = processor(image, "text", return_tensors="pt")
     out = model.generate(**inputs)
     description = processor.decode(out[0], skip_special_tokens=True)
     return description
