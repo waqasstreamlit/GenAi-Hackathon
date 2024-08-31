@@ -14,9 +14,9 @@ model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-capt
 # Your Gemini API key
 GEMINI_API_KEY = 'AIzaSyAE__BHdLtFBn3HEi0EcJ7ySNkZvqRU5YA'
 
+
 def generate_detailed_description(image):
-    # Activate padding to handle different tensor lengths
-    inputs = processor(image, return_tensors="pt", padding=True).to(device)
+    inputs = processor(image, "text", return_tensors="pt")
     out = model.generate(**inputs)
     description = processor.decode(out[0], skip_special_tokens=True)
     return description
@@ -81,3 +81,4 @@ if uploaded_file or img_url:
     
     st.subheader("Enhanced Description, Captions, and Logo Suggestions")
     st.write(enhanced_text)
+
