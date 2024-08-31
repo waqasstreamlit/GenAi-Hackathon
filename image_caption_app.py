@@ -12,7 +12,7 @@ processor = BlipProcessor.from_pretrained("Salesforce/blip-image-captioning-larg
 model = BlipForConditionalGeneration.from_pretrained("Salesforce/blip-image-captioning-large").to(device)
 
 # Your Gemini API key
-GEMINI_API_KEY = 'AIzaSyAE__BHdLtFBn3HEi0EcJ7ySNkZvqRU5YA'
+GEMINI_API_KEY = ''
 
 
 def generate_detailed_description(image):
