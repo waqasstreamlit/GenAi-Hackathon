@@ -1,8 +1,3 @@
-!pip install transformers
-!pip install torch torchvision
-!pip install pillow
-!pip install streamlit
-
 
 import requests
 from PIL import Image
