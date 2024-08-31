@@ -1,4 +1,3 @@
-pip install --upgrade pip
 import requests
 from PIL import Image
 from transformers import BlipProcessor, BlipForConditionalGeneration
