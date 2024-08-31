@@ -1,5 +1,6 @@
-streamlit==1.38.0
-requests==2.31.0
+streamlit>=1.38.0
+requests>=2.31.0
 Pillow
-transformers
-torch
+transformers>=4.33.0
+torch>=2.2.1
+
