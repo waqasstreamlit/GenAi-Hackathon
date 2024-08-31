@@ -1,6 +1,7 @@
-streamlit
-pyngrok
-transformers
-torch
-torchvision
-Pillow
+streamlit==1.26.0
+pyngrok==5.2.2
+transformers==4.33.0
+torch==2.0.1
+torchvision==0.15.2
+Pillow==10.0.0
+
